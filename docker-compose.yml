@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  serviceplanets:
+    build: ./service-planets
+    ports:
+      - "5000:5000"
+    environment: 
+      - MONGO_URL=mongodb
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo
+    container_name: my_first_mongodb
+    volumes:
+      - mongodb-data:/data/db/
+    ports:
+      - 27017:27017
+      
+volumes:
+  mongodb-data:
+    driver: local
