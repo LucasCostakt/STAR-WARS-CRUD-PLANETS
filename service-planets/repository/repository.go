@@ -87,7 +87,7 @@ func (c *MongoConnect) InsertNewPlanet(newInsertPlanet NewInsertPlanet) ([]byte,
 		return nil, fmt.Errorf("Erro InsertOne() InsertNewPlanet")
 	}
 
-	return []byte("Sucesso ao Inserir um Novo Planete"), nil
+	return []byte("Sucesso ao Inserir um Novo Planeta"), nil
 }
 
 func (c *MongoConnect) CounsultPlanetByName(name string) ([]byte, error) {
