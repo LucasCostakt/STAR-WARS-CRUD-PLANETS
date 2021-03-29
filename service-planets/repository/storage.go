@@ -36,7 +36,7 @@ type Filters struct {
 	Id   string `json:"id"`
 }
 
-const MongoUri = "mongodb://localhost:27017"
+const MongoUri = "mongodb://my_first_mongodb:27017"
 const DataBaseName = "admin"
 const CollectionName = "planets"
 const UrlPlanets = "https://swapi.dev/api/planets/?search="
